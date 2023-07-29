@@ -34,22 +34,64 @@ const cardData = [
     bgImage: "/images/ScopeCardImage/GreenCurve.svg",
     heading: "Unlock Business Potential and Profit",
     desc: "we'll harness business opportunities arising from your tree, sharing 70% of the profits with you for every sale made.",
-    color: "#008080",
+    color: "#57BC86",
   },
 ];
 
 const CustomPlatationScope = styled(Box)(({ theme }) => ({
+  padding: "30px",
   ".card-heading": {
     fontWeight: "700",
     fontSize: "24px",
     color: "#333333",
+    lineHeight: "36px",
   },
   ".card-description": {
     fontWeight: "400",
-    fontSize: "16px",
+    fontSize: "14px",
     color: "#333333",
+    marginTop: "10px",
+    lineHeight: "21px",
   },
-  [theme.breakpoints.down("md")]: {},
+  ".platation-scope-heading": {
+    fontWeight: "700",
+    fontSize: "20px",
+    lineHeight: "30px",
+    color: "#FDCE10",
+    textAlign: "center",
+  },
+  ".platation-scope-description": {
+    fontWeight: "700",
+    fontSize: "40px",
+    lineHeight: "60px",
+    color: "#FFFFFF",
+    textAlign: "center",
+    width: "80%",
+    margin: "auto",
+    padding: "40px 20px 60px 20px",
+  },
+  [theme.breakpoints.down("md")]: {
+    padding: "30px",
+    ".card-heading": {
+      fontSize: "16px",
+      lineHeight: "24px",
+    },
+    ".card-description": {
+      fontSize: "10px",
+      lineHeight: "14px",
+    },
+    ".platation-scope-heading": {
+      fontSize: "10px",
+      lineHeight: "15px",
+      padding: "10px 14px 8px 14px",
+    },
+    ".platation-scope-description": {
+      fontSize: "20px",
+      lineHeight: "30px",
+      width: "100%",
+      padding: "10px 14px 8px 14px",
+    },
+  },
 
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -58,16 +100,18 @@ const PlatationScope = () => {
   return (
     <CustomPlatationScope>
       <Box>
-        <Typography>HOW OUR TREES PLANTATION MAKE YOUR MONEY?</Typography>
-        <Typography>
+        <Typography className="platation-scope-heading">
+          HOW OUR TREES PLANTATION MAKE YOUR MONEY?
+        </Typography>
+        <Typography className="platation-scope-description">
           We plant in 10+ Cities through Profitable Future Investment with
           future investment grow and nature{" "}
         </Typography>
       </Box>
       <Grid
         container
-        spacing={1}
-        sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 40px 64px 120px" } }}
+        spacing={2}
+        sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 40px 4px 100px" } }}
       >
         {cardData.map((data) => (
           <Grid item sx={12} lg={4} key={data.id}>
@@ -75,18 +119,38 @@ const PlatationScope = () => {
               sx={{
                 borderRadius: "25px",
                 background: data.color,
-                maxWidth: 350,
+                maxWidth: 345,
               }}
             >
-              <CardMedia image={data.img} sx={{ height: 250 }} />
-              <CardContent>
+              <CardMedia image={data.img} sx={{ height: 200 }} />
+              <CardContent
+                sx={{
+                  p: { xs: "16px 20px 16px 24px", md: "20px 38px 10px 30px" },
+                }}
+              >
                 <Typography className="card-heading">{data.heading}</Typography>
                 <Typography className="card-description">
                   {data.desc}
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button>Learn More</Button>
+              <CardActions
+                sx={{
+                  p: { xs: "16px 16px 16px 24px", md: "0px 30px 20px 30px" },
+                }}
+              >
+                <Button
+                  disableElevation
+                  sx={{
+                    padding: "15px, 36px, 15px, 36px",
+                    borderRadius: "100px",
+                    background: data.color,
+                    color: "#333",
+                    border: "1px solid #333",
+                    marginTop: "50px",
+                  }}
+                >
+                  Learn More
+                </Button>
               </CardActions>
             </Card>
           </Grid>
