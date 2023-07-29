@@ -32,7 +32,7 @@ export const primary = {
   matPink: "#C091AC",
   black: "#000000",
 
-  fantaGrey:"#817382"
+  fantaGrey: "#817382",
 };
 
 const fontFamilyInfo = `'Poppins', sans-serif`;
@@ -78,30 +78,30 @@ let themeDef = createTheme({
         alignItems: "stretch",
       },
     },
-    MuiButton: {
-      defaultProps: {
-        variant: "contained",
-      },
-      styleOverrides: {
-        root: {
-          fontFamily: fontFamilyInfo,
-          borderRadius: "82px",
-          textTransform: "none",
-          color: primary.white,
-          background: primary.main,
-          fontWeight: "550",
-          border: "1px solid #FFFFFF",
-          boxShadow: "0px 4px 4px rgba(232, 52, 94, 0.7)",
-          "&:hover": {
-            color: primary.dark,
-          },
-        },
-        sizeMedium: {
-          fontSize: "16px",
-          padding: "12px 30px 12px  30px",
-        },
-      },
-    },
+    // MuiButton: {
+    //   defaultProps: {
+    //     variant: "contained",
+    //   },
+    //   styleOverrides: {
+    //     root: {
+    //       fontFamily: fontFamilyInfo,
+    //       borderRadius: "82px",
+    //       textTransform: "none",
+    //       color: primary.white,
+    //       background: primary.main,
+    //       fontWeight: "550",
+    //       border: "1px solid #FFFFFF",
+    //       boxShadow: "0px 4px 4px rgba(232, 52, 94, 0.7)",
+    //       "&:hover": {
+    //         color: primary.dark,
+    //       },
+    //     },
+    //     sizeMedium: {
+    //       fontSize: "16px",
+    //       padding: "12px 30px 12px  30px",
+    //     },
+    //   },
+    // },
 
     MuiTextField: {
       defaultProps: {
