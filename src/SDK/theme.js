@@ -32,7 +32,7 @@ export const primary = {
   matPink: "#C091AC",
   black: "#000000",
 
-  fantaGrey:"#817382"
+  fantaGrey: "#817382",
 };
 
 const fontFamilyInfo = `'Poppins', sans-serif`;
