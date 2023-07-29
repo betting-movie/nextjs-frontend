@@ -1,9 +1,13 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { MemoizedHeader } from "../src/modules/Layout/Header/Header";
 import { primary } from "@/src/SDK/theme";
 import { Box } from "@mui/material";
+import { MemoizedWelcomeInvesting } from "@/src/modules/Home/WelcomeInvesting";
+import { MemoizedWhyEcoPlantation } from "@/src/modules/Home/WhyEcoPlantation";
+import { MemoizedPlatationScope } from "@/src/modules/Home/PlatationScope";
+import { MemoizedPlatationStats } from "@/src/modules/Home/PlantationStats";
+import { MemoizedJoinPlantation } from "@/src/modules/Home/JoinPlantation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +20,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.svg" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <Box sx={{ background: primary?.main }}>
         <MemoizedHeader />
-
-        <Box sx={{ background: primary?.main }}></Box>
-      </main>
+        <MemoizedWelcomeInvesting />
+        <MemoizedWhyEcoPlantation />
+        <MemoizedPlatationScope />
+        <MemoizedPlatationStats />
+        <MemoizedJoinPlantation />
+      </Box>
     </Box>
   );
 }

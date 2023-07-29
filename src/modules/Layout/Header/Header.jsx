@@ -77,7 +77,7 @@ function Header(props) {
           >
             <Box style={{ width: "120px" }}>
               <img
-                src={"/images/logo.svg"}
+                src={"/images/mobileLogo.svg"}
                 alt="Turno club logo"
                 className={"image-section"}
                 onClick={() => {
@@ -170,6 +170,9 @@ function Header(props) {
                 sx={{
                   color: primary?.fantaGrey,
                   margin: "0em 1.5em 0em 1.5em",
+                  boxShadow: "none",
+                  border: "none",
+                  background: primary?.white,
                 }}
               >
                 {item}
@@ -192,6 +195,7 @@ function Header(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              borderRadius: "0px 16px 0px 0px",
             },
           }}
         >
