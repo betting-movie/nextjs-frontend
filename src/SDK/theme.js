@@ -33,6 +33,7 @@ export const primary = {
   black: "#000000",
 
   fantaGrey: "#817382",
+  fantaOrange: "#FE9C8F",
 };
 
 const fontFamilyInfo = `'Poppins', sans-serif`;
@@ -85,20 +86,20 @@ let themeDef = createTheme({
       styleOverrides: {
         root: {
           fontFamily: fontFamilyInfo,
-          borderRadius: "82px",
+          borderRadius: "4px",
           textTransform: "none",
-          color: primary.white,
-          background: primary.main,
+          color: primary?.white,
+          background: primary?.fantaOrange,
           fontWeight: "550",
-          border: "1px solid #FFFFFF",
-          boxShadow: "0px 4px 4px rgba(232, 52, 94, 0.7)",
+          //border: "1px solid #FFFFFF",
+          //boxShadow: "0px 4px 4px rgba(232, 52, 94, 0.7)",
           "&:hover": {
-            color: primary.dark,
+            color: primary.main,
           },
         },
         sizeMedium: {
           fontSize: "16px",
-          padding: "12px 30px 12px  30px",
+          padding: "10px 20px 10px  20px",
         },
       },
     },
