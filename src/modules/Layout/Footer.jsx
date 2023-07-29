@@ -20,10 +20,6 @@ import { primary } from "@/src/SDK/theme";
 import Link from "next/link";
 
 const CustomFooter = styled(Box)(({ theme }) => ({
-  backgroundColor: "#FFF",
-  paddingBottom: "24px",
-  border: "1px solid red",
-  marginTop: "15rem",
   ".footer-heading": {
     color: primary.main,
   },
@@ -47,6 +43,14 @@ const CustomFooter = styled(Box)(({ theme }) => ({
     fontSize: "16px",
     color: "#000000",
   },
+  ".footer-bottom-curve": {
+    width: "100%",
+    marginTop: "-250px",
+  },
+  ".footer-plant-style": {
+    width: "100%",
+    marginBottom: "-80px",
+  },
   [theme.breakpoints.down("md")]: {
     ".heading": {
       fontSize: "8px",
@@ -54,94 +58,150 @@ const CustomFooter = styled(Box)(({ theme }) => ({
     ".sub-data": {
       fontSize: "4px",
     },
+    ".footer-bottom-curve": {
+      marginTop: "-64px",
+    },
+    ".footer-plant-style": {
+      marginBottom: "-24px",
+    },
   },
 }));
 const Footer = () => {
   const navigate = useRouter();
   return (
     <CustomFooter>
-      <Box>
-        <Box
-          sx={{
-            padding: { xs: "10px 20px", md: "100px 60px" },
-            width: { xs: "90%", md: "65%" },
-          }}
-        >
-          <Typography
+      <Box sx={{ backgroundColor: "#FFF" }}>
+        <Box>
+          <Box
             sx={{
-              fontSize: { xs: "24px", md: "58px" },
-              paddingBottom: { xs: "10px" },
-              fontWeight: "700",
-            }}
-            className="footer-heading"
-          >
-            Join Ecopay Today and Make the Switch!
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: "10px", md: "16px" },
-              fontWeight: "500",
-              color: primary.mainText,
+              padding: { xs: "10px 20px", md: "100px 60px" },
+              width: { xs: "90%", md: "65%" },
             }}
           >
-            Join Ecopay Today and Make the Switch!
-            <br /> By choosing Ecopay, you become a catalyst for change. Your
-            investment dollars become a force for good, contributing to a world
-            that prioritizes environmental conservation, social progress, and
-            responsible economic growth. Switch to Ecopay today and take the
-            first step towards a brighter, greener, and more sustainable future.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            padding: { xs: "0px 20px", md: "0px 60px" },
-            display: "flex",
-            justifyContent: { md: "space-between" },
-            flexDirection: { xs: "column", md: "row" },
-            marginTop: { md: "-60px" },
-          }}
-        >
-          <Box>
-            <Button variant="contained" className="footer-invest-button">
-              Invest Now
-            </Button>
+            <Typography
+              sx={{
+                fontSize: { xs: "24px", md: "58px" },
+                paddingBottom: { xs: "10px" },
+                fontWeight: "700",
+              }}
+              className="footer-heading"
+            >
+              Join Ecopay Today and Make the Switch!
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "10px", md: "16px" },
+                fontWeight: "500",
+                color: primary.mainText,
+              }}
+            >
+              Join Ecopay Today and Make the Switch!
+              <br /> By choosing Ecopay, you become a catalyst for change. Your
+              investment dollars become a force for good, contributing to a
+              world that prioritizes environmental conservation, social
+              progress, and responsible economic growth. Switch to Ecopay today
+              and take the first step towards a brighter, greener, and more
+              sustainable future.
+            </Typography>
           </Box>
           <Box
-            className="media-icon-container"
-            sx={{ paddingTop: { xs: "20px" } }}
+            sx={{
+              padding: { xs: "0px 20px", md: "0px 60px" },
+              display: "flex",
+              justifyContent: { md: "space-between" },
+              flexDirection: { xs: "column", md: "row" },
+              marginTop: { md: "-60px" },
+            }}
           >
-            <IconButton>
-              {" "}
-              <InstagramIcon sx={{ color: primary.mainText }} />
-            </IconButton>
-            <IconButton>
-              <TwitterIcon sx={{ color: primary.mainText }} />
-            </IconButton>
-            <IconButton>
-              {" "}
-              <FacebookIcon sx={{ color: primary.mainText }} />
-            </IconButton>
-            <IconButton>
-              {" "}
-              <LinkedInIcon sx={{ color: primary.mainText }} />
-            </IconButton>
+            <Box>
+              <Button variant="contained" className="footer-invest-button">
+                Invest Now
+              </Button>
+            </Box>
+            <Box
+              className="media-icon-container"
+              sx={{ paddingTop: { xs: "20px" } }}
+            >
+              <IconButton>
+                {" "}
+                <InstagramIcon sx={{ color: primary.mainText }} />
+              </IconButton>
+              <IconButton>
+                <TwitterIcon sx={{ color: primary.mainText }} />
+              </IconButton>
+              <IconButton>
+                {" "}
+                <FacebookIcon sx={{ color: primary.mainText }} />
+              </IconButton>
+              <IconButton>
+                {" "}
+                <LinkedInIcon sx={{ color: primary.mainText }} />
+              </IconButton>
+            </Box>
           </Box>
         </Box>
-      </Box>
-      <Divider sx={{ color: "#D9D9D9", width: "90%" }} />
-      <Grid
-        container
-        spacing={4}
-        sx={{ p: { xs: "28px 20px 0px 20px", md: "126px 70px 64px 70px" } }}
-      >
-        <Grid sx={{ display: "block" }} item xs={3} lg={3}>
-          <Typography className="heading">{"Pages"}</Typography>
-          <List>
+        <Divider sx={{ color: "#D9D9D9", width: "90%" }} />
+        <Grid
+          container
+          spacing={4}
+          sx={{ p: { xs: "28px 20px 0px 20px", md: "126px 70px 64px 70px" } }}
+        >
+          <Grid sx={{ display: "block" }} item xs={3} lg={3}>
+            <Typography className="heading">{"Pages"}</Typography>
+            <List>
+              <ListItem sx={{ padding: "8px 0px" }}>
+                <Link href="#">
+                  <ListItemText
+                    primary={
+                      <Typography className="sub-data">{"Home"}</Typography>
+                    }
+                  />
+                </Link>
+              </ListItem>
+              <ListItem sx={{ padding: "8px 0px" }}>
+                <Link href="#">
+                  <ListItemText
+                    primary={
+                      <Typography className="sub-data">
+                        {"Marketplace"}
+                      </Typography>
+                    }
+                  />
+                </Link>
+              </ListItem>
+
+              <ListItem sx={{ padding: "8px 0px" }}>
+                <ListItemText
+                  primary={
+                    <Typography className="sub-data">{"Vehicals"}</Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem sx={{ padding: "8px 0px" }}>
+                <ListItemText
+                  primary={
+                    <Typography className="sub-data">{"About"}</Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem sx={{ padding: "8px 0px" }}>
+                <ListItemText
+                  primary={
+                    <Typography className="sub-data">{"Offers"}</Typography>
+                  }
+                />
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid sx={{ display: "block" }} item xs={3} lg={3}>
+            <Typography className="heading">{"Important"}</Typography>
             <ListItem sx={{ padding: "8px 0px" }}>
               <Link href="#">
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"Home"}</Typography>
+                    <Typography className="sub-data">
+                      {"Privacy Policy"}
+                    </Typography>
                   }
                 />
               </Link>
@@ -151,108 +211,99 @@ const Footer = () => {
                 <ListItemText
                   primary={
                     <Typography className="sub-data">
-                      {"Marketplace"}
+                      {"Grievance Redressal"}
                     </Typography>
                   }
                 />
               </Link>
             </ListItem>
+          </Grid>
 
-            <ListItem sx={{ padding: "8px 0px" }}>
-              <ListItemText
-                primary={
-                  <Typography className="sub-data">{"Vehicals"}</Typography>
-                }
-              />
-            </ListItem>
-            <ListItem sx={{ padding: "8px 0px" }}>
-              <ListItemText
-                primary={
-                  <Typography className="sub-data">{"About"}</Typography>
-                }
-              />
-            </ListItem>
-            <ListItem sx={{ padding: "8px 0px" }}>
-              <ListItemText
-                primary={
-                  <Typography className="sub-data">{"Offers"}</Typography>
-                }
-              />
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid sx={{ display: "block" }} item xs={3} lg={3}>
-          <Typography className="heading">{"Important"}</Typography>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <Link href="#">
-              <ListItemText
-                primary={
-                  <Typography className="sub-data">
-                    {"Privacy Policy"}
-                  </Typography>
-                }
-              />
-            </Link>
-          </ListItem>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <Link href="#">
-              <ListItemText
-                primary={
-                  <Typography className="sub-data">
-                    {"Grievance Redressal"}
-                  </Typography>
-                }
-              />
-            </Link>
-          </ListItem>
-        </Grid>
-
-        <Grid sx={{ display: "block" }} item xs={3} lg={3}>
-          <Typography className="heading">{"Press"}</Typography>
-        </Grid>
-        {/* <Grid sx={{ display: "block" }} item xs={3} lg={3}>
+          <Grid sx={{ display: "block" }} item xs={3} lg={3}>
+            <Typography className="heading">{"Press"}</Typography>
+          </Grid>
+          {/* <Grid sx={{ display: "block" }} item xs={3} lg={3}>
           <Typography className="heading">{"Blog"}</Typography>
         </Grid> */}
 
-        <Grid sx={{ display: "block" }} item xs={3} lg={3}>
-          <Typography className="heading">{"Get in touch with us"}</Typography>
-          <Typography className="heading">{"Address"}</Typography>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <ListItemText
-              primary={
-                <Typography className="sub-data">
-                  {
-                    "Blubble Pvt Ltd, Attic Space- Chanakya, 4th Floor, No. 32, 2nd cross, Nanjappa Reddy Layout, Koramangala 8th Block, Bengaluru, Karnataka 560095"
-                  }
-                </Typography>
-              }
-            />
-          </ListItem>
-          <Typography className="heading">{"Email"}</Typography>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <ListItemText
-              primary={
-                <Typography className="sub-data">{"turn@sales.in"}</Typography>
-              }
-            />
-          </ListItem>
-          <Typography className="heading">{"Phone Number"}</Typography>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <ListItemText
-              primary={
-                <Typography className="sub-data">{"+91 XXXXXXXXXX"}</Typography>
-              }
-            />
-          </ListItem>
-          <ListItem sx={{ padding: "8px 0px" }}>
-            <ListItemText
-              primary={
-                <Typography className="sub-data">{`© Copyright 2021. All rights reserved.`}</Typography>
-              }
-            />
-          </ListItem>
+          <Grid sx={{ display: "block" }} item xs={3} lg={3}>
+            <Typography className="heading">
+              {"Get in touch with us"}
+            </Typography>
+            <Typography className="heading">{"Address"}</Typography>
+            <ListItem sx={{ padding: "8px 0px" }}>
+              <ListItemText
+                primary={
+                  <Typography className="sub-data">
+                    {
+                      "Blubble Pvt Ltd, Attic Space- Chanakya, 4th Floor, No. 32, 2nd cross, Nanjappa Reddy Layout, Koramangala 8th Block, Bengaluru, Karnataka 560095"
+                    }
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <Typography className="heading">{"Email"}</Typography>
+            <ListItem sx={{ padding: "8px 0px" }}>
+              <ListItemText
+                primary={
+                  <Typography className="sub-data">
+                    {"turn@sales.in"}
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <Typography className="heading">{"Phone Number"}</Typography>
+            <ListItem sx={{ padding: "8px 0px" }}>
+              <ListItemText
+                primary={
+                  <Typography className="sub-data">
+                    {"+91 XXXXXXXXXX"}
+                  </Typography>
+                }
+              />
+            </ListItem>
+            <ListItem sx={{ padding: "8px 0px" }}>
+              <ListItemText
+                primary={
+                  <Typography className="sub-data">{`© Copyright 2021. All rights reserved.`}</Typography>
+                }
+              />
+            </ListItem>
+          </Grid>
         </Grid>
-      </Grid>
+        <img
+          src={"/images/PlantGroup.svg"}
+          alt="Pant Group"
+          className="footer-plant-style"
+        />
+        <img
+          src={"/images/TopCurves.svg"}
+          alt="Pant Group"
+          className="footer-bottom-curve"
+          width={"100%"}
+        />
+
+        <Box
+          sx={{
+            background: primary.main,
+            marginTop: { xs: "-10px", md: "-50px" },
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <Typography
+            sx={{
+              textAlign: "center",
+              padding: "50px",
+              color: "#fff",
+              fontSize: { sx: "8px", md: "20px" },
+              fontWeight: { sx: "500", md: "600" },
+            }}
+          >
+            Invest with Purpose. Invest with Ecopay.
+          </Typography>
+        </Box>
+      </Box>
     </CustomFooter>
   );
 };

@@ -1,8 +1,6 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -16,7 +14,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { primary } from "@/src/SDK/theme";
 import { Link } from "@mui/material";
-import Image from "next/image";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Our services", "About Us", "What’s new?"];
@@ -80,8 +77,7 @@ function Header(props) {
           >
             <Box style={{ width: "120px" }}>
               <img
-                src={"/images/logo.svg"}
-                fill
+                src={"/images/mobileLogo.svg"}
                 alt="Turno club logo"
                 className={"image-section"}
                 onClick={() => {
@@ -174,6 +170,9 @@ function Header(props) {
                 sx={{
                   color: primary?.fantaGrey,
                   margin: "0em 1.5em 0em 1.5em",
+                  boxShadow: "none",
+                  border: "none",
+                  background: primary?.white,
                 }}
               >
                 {item}
@@ -196,6 +195,7 @@ function Header(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              borderRadius: "0px 16px 0px 0px",
             },
           }}
         >
