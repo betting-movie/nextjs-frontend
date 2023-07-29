@@ -1,3 +1,4 @@
+import { primary } from "@/src/SDK/theme";
 import { Box, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 
@@ -29,12 +30,13 @@ const statsData = [
 ];
 
 const CustomPlatationStats = styled(Box)(({ theme }) => ({
+  background: "#fff",
   ".stats-heading": {
     fontWeight: "700",
     fontSize: "20px",
     textAlign: "center",
     color: "#FDCE10",
-    paddingTop:"40px"
+    paddingTop: "40px",
   },
   ".calc-data": {
     fontWeight: "600",
@@ -58,12 +60,16 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
     marginRight: "10px",
     marginTop: "14px",
   },
+  ".grid-container": {
+    width: "90%",
+    margin: "auto",
+  },
   [theme.breakpoints.down("md")]: {
     ".stats-heading": {
       fontSize: "10px",
       lineHeight: "15px",
-      width:"60%",
-      margin:"auto"
+      width: "60%",
+      margin: "auto",
     },
     ".stats-data": {
       fontSize: "21px",
@@ -76,48 +82,60 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
     },
     ".stats-image": {
       width: "50px",
-      // paddingLeft: "20px",
-      // marginRight: "10px",
       marginTop: "10px",
+    },
+    ".grid-container": {
+      width: "80%",
     },
   },
 
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    ".grid-container": {
+      width: "100%",
+    },
+  },
 }));
 
 const PlatationStats = () => {
   return (
     <CustomPlatationStats>
-      <Box>
-        <Typography className="stats-heading">
-          "ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT"
-        </Typography>
-        <Typography className="calc-data">{"20,74"}</Typography>
-      </Box>
-      <Box sx={{ width: { xs: "100%", md: "90%" }, margin: "auto" }}>
-        <Grid
-          container
-          spacing={2}
-          sx={{ p: { xs: "16px 16px 16px 20px", md: "1px 0px 64px 0px" } }}
-        >
-          {statsData.map((stats) => (
-            <Grid item sx={2} lg={3} key={stats.id}>
-              <Box>
-                <img src={stats.img} className="stats-image" />
-              </Box>
+      <Box sx={{ background: primary.main }}>
+        <Box>
+          <Typography className="stats-heading">
+            "ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT"
+          </Typography>
+          <Typography className="calc-data">{"20,74"}</Typography>
+        </Box>
+        <Box className="grid-container">
+          <Grid
+            container
+            spacing={2}
+            sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
+          >
+            {statsData.map((stats) => (
+              <Grid item sx={2} lg={3} key={stats.id}>
+                <Box>
+                  <img src={stats.img} className="stats-image" />
+                </Box>
 
-              <Box
-                display={"flex"}
-                flexDirection={"column"}
-                justifyContent={"center"}
-              >
-                <Typography className="stats-data">{stats.data}</Typography>
-                <Typography className="stats-name">{stats.name}</Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
+                <Box
+                  display={"flex"}
+                  flexDirection={"column"}
+                  justifyContent={"center"}
+                >
+                  <Typography className="stats-data">{stats.data}</Typography>
+                  <Typography className="stats-name">{stats.name}</Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
+      <img
+        src={"/images/BottomCurves.svg"}
+        width="100%"
+        style={{ marginTop: "-10px" }}
+      />
     </CustomPlatationStats>
   );
 };
