@@ -35,12 +35,12 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
   ".stats-data": {
     fontWeight: "600",
     fontSize: "54px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-name": {
     fontWeight: "600",
     fontSize: "20px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-image": {
     height: "70px",

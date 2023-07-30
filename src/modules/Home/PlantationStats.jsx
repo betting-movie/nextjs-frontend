@@ -9,24 +9,24 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
     fontWeight: "700",
     fontSize: "20px",
     textAlign: "center",
-    color: "#FDCE10",
+    color: primary?.darkYellow,
     paddingTop: "40px",
   },
   ".calc-data": {
     fontWeight: "600",
     fontSize: "200px",
     textAlign: "center",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-data": {
     fontWeight: "600",
     fontSize: "54px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-name": {
     fontWeight: "600",
     fontSize: "20px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-image": {
     width: "70px",
@@ -73,7 +73,7 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
 const PlatationStats = () => {
   return (
     <CustomPlatationStats>
-      <Box sx={{ background: primary.main }}>
+      <Box sx={{ background: primary?.main }}>
         <Box>
           <Typography className="stats-heading">
             ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
@@ -89,7 +89,7 @@ const PlatationStats = () => {
             {statsData?.map((stats) => (
               <Grid item sm={2} lg={3} key={stats?.id}>
                 <Box>
-                  <img src={stats.img} className="stats-image" />
+                  <img src={stats?.img} className="stats-image" />
                 </Box>
 
                 <Box
@@ -97,8 +97,8 @@ const PlatationStats = () => {
                   flexDirection={"column"}
                   justifyContent={"center"}
                 >
-                  <Typography className="stats-data">{stats.data}</Typography>
-                  <Typography className="stats-name">{stats.name}</Typography>
+                  <Typography className="stats-data">{stats?.data}</Typography>
+                  <Typography className="stats-name">{stats?.name}</Typography>
                 </Box>
               </Grid>
             ))}
