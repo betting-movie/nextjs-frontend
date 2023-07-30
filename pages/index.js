@@ -8,6 +8,7 @@ import { MemoizedWhyEcoPlantation } from "@/src/modules/Home/WhyEcoPlantation";
 import { MemoizedPlatationScope } from "@/src/modules/Home/PlatationScope";
 import { MemoizedPlatationStats } from "@/src/modules/Home/PlantationStats";
 import { MemoizedJoinPlantation } from "@/src/modules/Home/JoinPlantation";
+import { MemoizedFooter } from "@/src/modules/Layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home() {
         <MemoizedPlatationScope />
         <MemoizedPlatationStats />
         <MemoizedJoinPlantation />
+        <MemoizedFooter />
       </Box>
     </Box>
   );

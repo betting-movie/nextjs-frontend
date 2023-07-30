@@ -8,7 +8,7 @@ const CustomWhyEcoPlantation = styled(Box)(({ theme }) => ({
 }));
 
 const WhyEcoPlantation = () => {
-  return <CustomWhyEcoPlantation>WhyEcoPlantation</CustomWhyEcoPlantation>;
+  return <CustomWhyEcoPlantation></CustomWhyEcoPlantation>;
 };
 
 export const MemoizedWhyEcoPlantation = React.memo(WhyEcoPlantation);
