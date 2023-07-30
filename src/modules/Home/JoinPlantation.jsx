@@ -98,11 +98,12 @@ const JoinPlantation = () => {
         </Box>
         <Box
           className="media-icon-container"
+          style={{display:"flex", flexDirection:"row"}}
           sx={{ paddingTop: { xs: "20px" } }}
         >
           {Icon.map((icon,index) => (
             
-            <>
+            <Box  key={icon.id} >
               <IconButton
                 variant="contained"
                 sx={{
@@ -115,7 +116,7 @@ const JoinPlantation = () => {
               >
                 {icon.name}
               </IconButton>
-            </>
+            </ Box>
           ))}
         </Box>
       </Box>

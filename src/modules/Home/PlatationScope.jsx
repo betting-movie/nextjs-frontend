@@ -14,7 +14,7 @@ import React from "react";
 const cardData = [
   {
     id: "34564dsgfdhgf",
-    img: "/images/ScopeCardImage/GreenLegacy.svg",
+    img: "/images/ScopeCardImage/GreenLegacy.webp",
     bgImage: "/images/ScopeCardImage/YellowCurve.svg",
     heading: "Choose Your Tree, Leave a Green Legacy",
     desc: "At ecopay, we understand that sustainability is a personal commitment. That's why we empower you to choose the tree that resonates with your values and aspirations.",
@@ -22,7 +22,7 @@ const cardData = [
   },
   {
     id: "34564d46546sgfdhgf",
-    img: "/images/ScopeCardImage/Bountful.svg",
+    img: "/images/ScopeCardImage/Bountful.webp",
     bgImage: "/images/ScopeCardImage/PinkCurve.svg",
     heading: "Expert Care and Bountiful Results",
     desc: "Once your tree is planted, you can rest assured that our dedicated team will provide expert care and attention throughout its life cycle. From nurturing to fostering growth, we'll ensure your tree thrives, becoming a fruitful source of benefits.",
@@ -30,7 +30,7 @@ const cardData = [
   },
   {
     id: "345689794dsgfdhgf",
-    img: "/images/ScopeCardImage/BussinessProfit.svg",
+    img: "/images/ScopeCardImage/BussinessProfit.webp",
     bgImage: "/images/ScopeCardImage/GreenCurve.svg",
     heading: "Unlock Business Potential and Profit",
     desc: "we'll harness business opportunities arising from your tree, sharing 70% of the profits with you for every sale made.",
@@ -117,15 +117,15 @@ const PlatationScope = () => {
         sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 40px 4px 100px" } }}
       >
         {cardData.map((data) => (
-          <Grid item sm={12} lg={4} key={data.id}>
+          <Grid item sm={12} lg={4} key={data?.id}>
             <Card
               sx={{
                 borderRadius: "25px",
                 background: data.color,
-                maxWidth: 345,
+                maxWidth: 385,
               }}
             >
-              <CardMedia image={data.img} sx={{ height: 200 }} />
+              <CardMedia image={data?.img} sx={{ height:{sm:"300px",md:"350px",xs:"300px"} }} />
               <CardContent
                 sx={{
                   p: { xs: "16px 20px 16px 24px", md: "20px 38px 10px 30px" },

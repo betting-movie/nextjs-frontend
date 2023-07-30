@@ -1,33 +1,7 @@
 import { primary } from "@/src/SDK/theme";
+import { statsData } from "@/src/constant/StatData";
 import { Box, Grid, Typography, styled } from "@mui/material";
 import React from "react";
-
-const statsData = [
-  {
-    id: 1,
-    name: "total plantation",
-    img: "/images/pinkPlant.png",
-    data: "2074.0",
-  },
-  {
-    id: 2,
-    name: "total profit",
-    img: "/images/Coin.svg",
-    data: "124476.0",
-  },
-  {
-    id: 3,
-    name: "cities involved",
-    img: "/images/MapIcon.webp",
-    data: "10+",
-  },
-  {
-    id: 4,
-    name: "species",
-    img: "/images/yellowPlant.png",
-    data: "70+",
-  },
-];
 
 const CustomPlatationStats = styled(Box)(({ theme }) => ({
   background: "#fff",
@@ -112,8 +86,8 @@ const PlatationStats = () => {
             spacing={2}
             sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
           >
-            {statsData.map((stats) => (
-              <Grid item sm={2} lg={3} key={stats.id}>
+            {statsData?.map((stats) => (
+              <Grid item sm={2} lg={3} key={stats?.id}>
                 <Box>
                   <img src={stats.img} className="stats-image" />
                 </Box>
