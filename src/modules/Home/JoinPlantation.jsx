@@ -9,23 +9,23 @@ import { Facebook, YouTube } from "@mui/icons-material";
 
 const Icon = [
   {
-    id: "sdgfdghf34546",
+    id: 1,
     name: <InstagramIcon />,
   },
   {
-    id: "565676rdhgfhj",
+    id: 2,
     name: <YouTube />,
   },
   {
-    id: "565yutu676rdhgfhj",
+    id: 3,
     name: <TwitterIcon />,
   },
   {
-    id: "565yutu676rfghfdhgfhj",
+    id: 4,
     name: <LinkedInIcon />,
   },
   {
-    id: "565yutu676rfghfdjkhhgfhj",
+    id: 5,
     name: <Facebook />,
   },
 ];
@@ -100,7 +100,8 @@ const JoinPlantation = () => {
           className="media-icon-container"
           sx={{ paddingTop: { xs: "20px" } }}
         >
-          {Icon.map((icon) => (
+          {Icon.map((icon,index) => (
+            
             <>
               <IconButton
                 variant="contained"

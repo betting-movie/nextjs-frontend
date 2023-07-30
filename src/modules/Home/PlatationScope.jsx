@@ -52,6 +52,7 @@ const CustomPlatationScope = styled(Box)(({ theme }) => ({
     color: "#333333",
     marginTop: "10px",
     lineHeight: "21px",
+    height:"80px"
   },
   ".platation-scope-heading": {
     fontWeight: "700",
@@ -71,14 +72,15 @@ const CustomPlatationScope = styled(Box)(({ theme }) => ({
     padding: "40px 20px 60px 20px",
   },
   [theme.breakpoints.down("md")]: {
-    padding: "30px",
+    padding: "10px",
     ".card-heading": {
       fontSize: "16px",
       lineHeight: "24px",
     },
     ".card-description": {
-      fontSize: "10px",
-      lineHeight: "14px",
+      fontSize: "12px",
+      lineHeight: "18px",
+      height:"40px"
     },
     ".platation-scope-heading": {
       fontSize: "10px",
@@ -90,6 +92,7 @@ const CustomPlatationScope = styled(Box)(({ theme }) => ({
       lineHeight: "30px",
       width: "100%",
       padding: "10px 14px 8px 14px",
+     
     },
   },
 
@@ -114,7 +117,7 @@ const PlatationScope = () => {
         sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 40px 4px 100px" } }}
       >
         {cardData.map((data) => (
-          <Grid item sx={12} lg={4} key={data.id}>
+          <Grid item sm={12} lg={4} key={data.id}>
             <Card
               sx={{
                 borderRadius: "25px",
@@ -135,6 +138,7 @@ const PlatationScope = () => {
               </CardContent>
               <CardActions
                 sx={{
+                   
                   p: { xs: "16px 16px 16px 24px", md: "0px 30px 20px 30px" },
                 }}
               >
@@ -147,6 +151,7 @@ const PlatationScope = () => {
                     color: "#333",
                     border: "1px solid #333",
                     marginTop: "50px",
+                    
                   }}
                 >
                   Learn More

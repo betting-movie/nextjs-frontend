@@ -4,25 +4,25 @@ import React from "react";
 
 const statsData = [
   {
-    id: "4567dsghjgf",
+    id: 1,
     name: "total plantation",
     img: "/images/pinkPlant.png",
     data: "2074.0",
   },
   {
-    id: "4567dgjhsghjgf",
+    id: 2,
     name: "total profit",
     img: "/images/Coin.svg",
     data: "124476.0",
   },
   {
-    id: "45hjg67dsghjgf",
+    id: 3,
     name: "cities involved",
     img: "/images/MapIcon.webp",
     data: "10+",
   },
   {
-    id: "ghj4567dsghjgf",
+    id: 4,
     name: "species",
     img: "/images/yellowPlant.png",
     data: "70+",
@@ -102,9 +102,9 @@ const PlatationStats = () => {
       <Box sx={{ background: primary.main }}>
         <Box>
           <Typography className="stats-heading">
-            "ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT"
+            ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
           </Typography>
-          <Typography className="calc-data">{"20,74"}</Typography>
+          <Typography className="calc-data">{"20,74,890"}</Typography>
         </Box>
         <Box className="grid-container">
           <Grid
@@ -113,7 +113,7 @@ const PlatationStats = () => {
             sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
           >
             {statsData.map((stats) => (
-              <Grid item sx={2} lg={3} key={stats.id}>
+              <Grid item sm={2} lg={3} key={stats.id}>
                 <Box>
                   <img src={stats.img} className="stats-image" />
                 </Box>
