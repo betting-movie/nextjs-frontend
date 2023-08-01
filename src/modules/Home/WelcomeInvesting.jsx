@@ -29,7 +29,7 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 
   ".cta": {
     fontSize: "20px",
-    marginBottom:"20px"
+    marginBottom: "20px",
   },
 
   ".stats-data": {
@@ -46,7 +46,6 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
     height: "70px",
     marginRight: "10px",
     marginTop: "14px",
-    
   },
   ".grid-container": {
     ///width: "90%",
@@ -83,20 +82,20 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
     },
 
     ".stats-data": {
-        fontSize: "21px",
-      },
-      ".stats-name": {
-        fontSize: "10px",
-      },
-      
-      ".stats-image": {
-        width: "50px",
-        marginTop: "10px",
-      },
-      ".grid-container": {
-        marginBottom:"20px"
-        //width: "80%",
-      },
+      fontSize: "21px",
+    },
+    ".stats-name": {
+      fontSize: "10px",
+    },
+
+    ".stats-image": {
+      width: "50px",
+      marginTop: "10px",
+    },
+    ".grid-container": {
+      marginBottom: "20px",
+      //width: "80%",
+    },
   },
 
   [theme.breakpoints.down("sm")]: {
@@ -128,19 +127,17 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
     },
 
     ".stats-data": {
-        fontSize: "21px",
-      },
-      ".stats-name": {
-        fontSize: "10px",
-      },
-     
-      ".stats-image": {
-        height: "50px",
-       
-        marginTop: "10px",
-        
-      },
-     
+      fontSize: "21px",
+    },
+    ".stats-name": {
+      fontSize: "10px",
+    },
+
+    ".stats-image": {
+      height: "50px",
+
+      marginTop: "10px",
+    },
   },
 }));
 
@@ -160,31 +157,37 @@ const WelcomeInvesting = () => {
             <Button className="cta">Invest Now</Button>
 
             <Box className="grid-container">
-          <Grid
-            container
-           spacing={2}
-    //sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
+              <Grid
+                container
+                spacing={2}
+                //sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
+              >
+                {statsData
+                  ?.filter((data) => {
+                    return data?.id < 3;
+                  })
+                  .map((stats) => (
+                    <Grid item sm={6} lg={6} key={stats?.id}>
+                      <Box>
+                        <img src={stats.img} className="stats-image" />
+                      </Box>
 
-
-          >
-            {statsData?.filter((data)=>{return (data?.id<3)}).map((stats) => (
-              <Grid item sm={6} lg={6} key={stats?.id}>
-                <Box>
-                  <img src={stats.img} className="stats-image" />
-                </Box>
-
-                <Box
-                  display={"flex"}
-                  flexDirection={"column"}
-                  justifyContent={"center"}
-                >
-                  <Typography className="stats-data">{stats?.data}</Typography>
-                  <Typography className="stats-name">{stats?.name}</Typography>
-                </Box>
+                      <Box
+                        display={"flex"}
+                        flexDirection={"column"}
+                        justifyContent={"center"}
+                      >
+                        <Typography className="stats-data">
+                          {stats?.data}
+                        </Typography>
+                        <Typography className="stats-name">
+                          {stats?.name}
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  ))}
               </Grid>
-            ))}
-          </Grid>
-        </Box>
+            </Box>
           </Box>
         </Grid>
         <Grid item md={6}>

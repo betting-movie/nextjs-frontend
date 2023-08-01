@@ -12,7 +12,6 @@ export const primary = {
   inactiveState: "#EDECE8",
   greyText: "#9C9A9D",
 
-
   mainGreen: "#35BF68",
   secondaryGreen: "#EBF9F0",
   lightGreen: "#DFFFEB",
@@ -38,7 +37,7 @@ export const primary = {
 
   darkYellow: "#FDCE10",
 
-  darkGrey:"#52525b"
+  darkGrey: "#52525b",
 };
 
 const fontFamilyInfo = `'Poppins', sans-serif`;
