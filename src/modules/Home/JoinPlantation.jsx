@@ -33,10 +33,9 @@ const Icon = [
 const CustomJoinPlantation = styled(Box)(({ theme }) => ({
   background: "#fff",
   ".join-heading": {
-    color: primary.main,
+    color: primary?.main,
   },
   ".join-invest-button": {
-    backgroundColor: "#FE9C8F",
     borderRadius: "73px",
     fontWeight: "600",
     textAlign: "center",
@@ -71,7 +70,7 @@ const JoinPlantation = () => {
           sx={{
             fontSize: { xs: "10px", md: "16px" },
             fontWeight: "500",
-            color: primary.mainText,
+            color: primary?.mainText,
           }}
         >
           Join Ecopay Today and Make the Switch!
@@ -98,24 +97,24 @@ const JoinPlantation = () => {
         </Box>
         <Box
           className="media-icon-container"
+          style={{ display: "flex", flexDirection: "row" }}
           sx={{ paddingTop: { xs: "20px" } }}
         >
-          {Icon.map((icon,index) => (
-            
-            <>
+          {Icon?.map((icon, index) => (
+            <Box key={icon?.id}>
               <IconButton
                 variant="contained"
                 sx={{
                   borderRadius: "50%",
-                  background: "#52525b",
-                  color: "#fff",
+                  background: primary?.darkGrey,
+                  color: primary?.white,
                   margin: "2px",
                 }}
-                key={icon.id}
+                key={icon?.id}
               >
-                {icon.name}
+                {icon?.name}
               </IconButton>
-            </>
+            </Box>
           ))}
         </Box>
       </Box>

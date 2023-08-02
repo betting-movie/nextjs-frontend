@@ -20,13 +20,13 @@ const CustomFooter = styled(Box)(({ theme }) => ({
     fontWeight: "700",
     fontSize: "20px",
     lineHeight: "1.1em",
-    color: "#000000",
+    color: primary?.black,
     marginBottom: "12px",
   },
   ".sub-data": {
     fontWeight: "400",
     fontSize: "16px",
-    color: "#000000",
+    color: primary?.black,
   },
   ".footer-bottom-curve": {
     width: "100%",
@@ -40,7 +40,7 @@ const CustomFooter = styled(Box)(({ theme }) => ({
     fontWeight: "700",
     fontSize: "20px",
     lineHeight: "1.1em",
-    color: "#000000",
+    color: primary?.black,
   },
   [theme.breakpoints.down("md")]: {
     ".heading": {
@@ -81,7 +81,8 @@ const Footer = () => {
   const navigate = useRouter();
   return (
     <CustomFooter>
-      <Box sx={{ backgroundColor: "#FFF" }}>
+      <Box sx={{ backgroundColor: primary?.white }}>
+        `1`
         <Divider
           sx={{
             color: "#D9D9D9",
@@ -112,7 +113,7 @@ const Footer = () => {
                 <ListItemText
                   primary={
                     <Typography className="sub-data">
-                      {"Marketplace"}
+                      {"Our Services"}
                     </Typography>
                   }
                 />
@@ -122,24 +123,26 @@ const Footer = () => {
               <ListItem sx={{ padding: "8px 0px" }}>
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"Vehicals"}</Typography>
+                    <Typography className="sub-data">{"About Us"}</Typography>
                   }
                 />
               </ListItem>
               <ListItem sx={{ padding: "8px 0px" }}>
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"About"}</Typography>
+                    <Typography className="sub-data">
+                      {"What's new?"}
+                    </Typography>
                   }
                 />
               </ListItem>
-              <ListItem sx={{ padding: "8px 0px" }}>
+              {/* <ListItem sx={{ padding: "8px 0px" }}>
                 <ListItemText
                   primary={
                     <Typography className="sub-data">{"Offers"}</Typography>
                   }
                 />
-              </ListItem>
+              </ListItem> */}
             </List>
           </Grid>
 
@@ -249,7 +252,6 @@ const Footer = () => {
           className="footer-bottom-curve"
           width={"100%"}
         />
-
         <Box
           sx={{
             background: primary.main,
@@ -262,7 +264,7 @@ const Footer = () => {
             sx={{
               textAlign: "center",
               padding: "50px",
-              color: "#fff",
+              color: primary.white,
               fontSize: { sx: "8px", md: "20px" },
               fontWeight: { sx: "500", md: "600" },
             }}

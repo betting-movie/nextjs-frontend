@@ -1,33 +1,7 @@
 import { primary } from "@/src/SDK/theme";
+import { statsData } from "@/src/constant/StatData";
 import { Box, Grid, Typography, styled } from "@mui/material";
 import React from "react";
-
-const statsData = [
-  {
-    id: 1,
-    name: "total plantation",
-    img: "/images/pinkPlant.png",
-    data: "2074.0",
-  },
-  {
-    id: 2,
-    name: "total profit",
-    img: "/images/Coin.svg",
-    data: "124476.0",
-  },
-  {
-    id: 3,
-    name: "cities involved",
-    img: "/images/MapIcon.webp",
-    data: "10+",
-  },
-  {
-    id: 4,
-    name: "species",
-    img: "/images/yellowPlant.png",
-    data: "70+",
-  },
-];
 
 const CustomPlatationStats = styled(Box)(({ theme }) => ({
   background: "#fff",
@@ -35,24 +9,24 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
     fontWeight: "700",
     fontSize: "20px",
     textAlign: "center",
-    color: "#FDCE10",
+    color: primary?.darkYellow,
     paddingTop: "40px",
   },
   ".calc-data": {
     fontWeight: "600",
     fontSize: "200px",
     textAlign: "center",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-data": {
     fontWeight: "600",
     fontSize: "54px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-name": {
     fontWeight: "600",
     fontSize: "20px",
-    color: "#fff",
+    color: primary?.white,
   },
   ".stats-image": {
     width: "70px",
@@ -99,7 +73,7 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
 const PlatationStats = () => {
   return (
     <CustomPlatationStats>
-      <Box sx={{ background: primary.main }}>
+      <Box sx={{ background: primary?.main }}>
         <Box>
           <Typography className="stats-heading">
             ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
@@ -112,10 +86,10 @@ const PlatationStats = () => {
             spacing={2}
             sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
           >
-            {statsData.map((stats) => (
-              <Grid item sm={2} lg={3} key={stats.id}>
+            {statsData?.map((stats) => (
+              <Grid item sm={2} lg={3} key={stats?.id}>
                 <Box>
-                  <img src={stats.img} className="stats-image" />
+                  <img src={stats?.img} className="stats-image" />
                 </Box>
 
                 <Box
@@ -123,8 +97,8 @@ const PlatationStats = () => {
                   flexDirection={"column"}
                   justifyContent={"center"}
                 >
-                  <Typography className="stats-data">{stats.data}</Typography>
-                  <Typography className="stats-name">{stats.name}</Typography>
+                  <Typography className="stats-data">{stats?.data}</Typography>
+                  <Typography className="stats-name">{stats?.name}</Typography>
                 </Box>
               </Grid>
             ))}

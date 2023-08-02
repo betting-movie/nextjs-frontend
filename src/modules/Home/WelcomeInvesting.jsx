@@ -1,4 +1,6 @@
+import { CustomStepper } from "@/src/SDK/Stepper";
 import { primary } from "@/src/SDK/theme";
+import { statsData } from "@/src/constant/StatData";
 import { Box, Button, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 
@@ -28,6 +30,27 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 
   ".cta": {
     fontSize: "20px",
+    marginBottom: "20px",
+  },
+
+  ".stats-data": {
+    fontWeight: "600",
+    fontSize: "54px",
+    color: primary?.white,
+  },
+  ".stats-name": {
+    fontWeight: "600",
+    fontSize: "20px",
+    color: primary?.white,
+  },
+  ".stats-image": {
+    height: "70px",
+    marginRight: "10px",
+    marginTop: "14px",
+  },
+  ".grid-container": {
+    ///width: "90%",
+    margin: "auto",
   },
 
   [theme.breakpoints.down("md")]: {
@@ -58,6 +81,22 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
       marginBottom: "10px",
       fontSize: "18px",
     },
+
+    ".stats-data": {
+      fontSize: "21px",
+    },
+    ".stats-name": {
+      fontSize: "10px",
+    },
+
+    ".stats-image": {
+      width: "50px",
+      marginTop: "10px",
+    },
+    ".grid-container": {
+      marginBottom: "20px",
+      //width: "80%",
+    },
   },
 
   [theme.breakpoints.down("sm")]: {
@@ -87,6 +126,19 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
       marginBottom: "10px",
       fontSize: "14px",
     },
+
+    ".stats-data": {
+      fontSize: "21px",
+    },
+    ".stats-name": {
+      fontSize: "10px",
+    },
+
+    ".stats-image": {
+      height: "50px",
+
+      marginTop: "10px",
+    },
   },
 }));
 
@@ -104,6 +156,35 @@ const WelcomeInvesting = () => {
               Plant tree | Help Nature | Profit Investment
             </Typography>
             <Button className="cta">Invest Now</Button>
+
+            <Box className="grid-container">
+              <Grid container spacing={2}>
+                {statsData
+                  ?.filter((data) => {
+                    return data?.id < 3;
+                  })
+                  .map((stats) => (
+                    <Grid item sm={6} lg={6} key={stats?.id}>
+                      <Box>
+                        <img src={stats.img} className="stats-image" />
+                      </Box>
+
+                      <Box
+                        display={"flex"}
+                        flexDirection={"column"}
+                        justifyContent={"center"}
+                      >
+                        <Typography className="stats-data">
+                          {stats?.data}
+                        </Typography>
+                        <Typography className="stats-name">
+                          {stats?.name}
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  ))}
+              </Grid>
+            </Box>
           </Box>
         </Grid>
         <Grid item md={6}>

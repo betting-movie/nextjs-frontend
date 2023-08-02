@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 export default function Test() {
@@ -7,7 +6,7 @@ export default function Test() {
 
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${apiKey}`
+    Authorization: `Bearer ${apiKey}`,
   };
 
   const body = JSON.stringify({
@@ -16,35 +15,32 @@ export default function Test() {
       {
         role: "user",
         content:
-          "Create an html script for a website for with ideas below and keep all the styles inline"
-      }
+          "Create an html script for a website for with ideas below and keep all the styles inline",
+      },
     ],
-    temperature: 0.7
+    temperature: 0.7,
   });
 
-  const chatGPTData = ()=>{
-
+  const chatGPTData = () => {
     fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: headers,
-        body: body
+      method: "POST",
+      headers: headers,
+      body: body,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("deepak", data?.choices[0]?.message);
+        setHtmlCode(data?.choices[0]?.message?.content);
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("deepak", data?.choices[0]?.message);
-          setHtmlCode(data?.choices[0]?.message?.content);
-          
-        })
-        .catch((error) => {
-          console.log(error);
-          // Handle any errors that occur during the request
-        });
-  }
+      .catch((error) => {
+        console.log(error);
+        // Handle any errors that occur during the request
+      });
+  };
 
-  useEffect(()=>{
-    chatGPTData()
-  },[])
- 
+  useEffect(() => {
+    chatGPTData();
+  }, []);
 
   const var1 = `<!DOCTYPE html>
   <html lang="en">
