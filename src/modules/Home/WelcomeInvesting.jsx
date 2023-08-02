@@ -1,3 +1,4 @@
+import { CustomStepper } from "@/src/SDK/Stepper";
 import { primary } from "@/src/SDK/theme";
 import { statsData } from "@/src/constant/StatData";
 import { Box, Button, Grid, Typography, styled } from "@mui/material";
@@ -157,11 +158,7 @@ const WelcomeInvesting = () => {
             <Button className="cta">Invest Now</Button>
 
             <Box className="grid-container">
-              <Grid
-                container
-                spacing={2}
-                //sx={{ p: { xs: "16px 16px 16px 24px", md: "1px 0px 64px 0px" } }}
-              >
+              <Grid container spacing={2}>
                 {statsData
                   ?.filter((data) => {
                     return data?.id < 3;

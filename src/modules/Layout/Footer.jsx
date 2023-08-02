@@ -82,6 +82,7 @@ const Footer = () => {
   return (
     <CustomFooter>
       <Box sx={{ backgroundColor: primary?.white }}>
+        `1`
         <Divider
           sx={{
             color: "#D9D9D9",
@@ -251,7 +252,6 @@ const Footer = () => {
           className="footer-bottom-curve"
           width={"100%"}
         />
-
         <Box
           sx={{
             background: primary.main,

@@ -28,7 +28,7 @@ export const statsData = [
 export const WhyEcoPlantationData = [
   {
     id: 1,
-    img: "/images/yellowPlant.png",
+    img: "/images/Plant.svg",
     investmentPurpose: "Investment with Purpose",
     detail:
       "Your investment with Ecopay goes beyond monetary gains. You become a part of a global movement to support environmentally friendly projects and foster social responsibility.",
@@ -49,7 +49,7 @@ export const WhyEcoPlantationData = [
   },
   {
     id: 4,
-    img: "/images/yellowPlant.png",
+    img: "/images/Plant.svg",
     investmentPurpose: "Transparency and Trust",
     detail:
       "Your investment with Ecopay goes beyond monetary gains. You become a part of a global movement to support environmentally friendly projects and foster social responsibility.",
