@@ -28,28 +28,28 @@ export const statsData = [
 export const WhyEcoPlantationData = [
   {
     id: 1,
-    img: "/images/Plant.svg",
+    img: "/images/whyecopay1.webp",
     investmentPurpose: "Investment with Purpose",
     detail:
       "Your investment with Ecopay goes beyond monetary gains. You become a part of a global movement to support environmentally friendly projects and foster social responsibility.",
   },
   {
     id: 2,
-    img: "/images/yellowPlant.png",
+    img: "/images/whyecopay2.webp",
     investmentPurpose: "Attractive Returns",
     detail:
       "Sustainable investments have shown remarkable potential for financial returns. At Ecopay, we ensure that your investments are not just ethically sound but also financially rewarding.",
   },
   {
     id: 3,
-    img: "/images/yellowPlant.png",
+    img: "/images/whyecopay3.webp",
     investmentPurpose: "A Greener Portfolio, A Greener Future",
     detail:
       "Diversify your investment portfolio with Ecopay's sustainable opportunities, and witness your financial growth align with your eco-conscious values. We believe that sustainability and profitability go hand in hand, and your journey with Ecopay will inspire others to make responsible investment choices.",
   },
   {
     id: 4,
-    img: "/images/Plant.svg",
+    img: "/images/whyecopay4.webp",
     investmentPurpose: "Transparency and Trust",
     detail:
       "Your investment with Ecopay goes beyond monetary gains. You become a part of a global movement to support environmentally friendly projects and foster social responsibility.",
