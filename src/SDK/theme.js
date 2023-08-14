@@ -110,16 +110,17 @@ let themeDef = createTheme({
 
     MuiTextField: {
       defaultProps: {
-        variant: "outlined",
+        variant: "filled",
       },
       styleOverrides: {
         root: {
           fontFamily: fontFamilyInfo,
           minHeight: 48,
+
           "&.Mui-focused": {
             backgroundColor: "transparent",
             boxShadow: `${(primary.light, 0.25)} 0 0 0 2px`,
-            borderColor: primary.secondary,
+            borderColor: primary?.main,
           },
         },
       },
@@ -127,6 +128,7 @@ let themeDef = createTheme({
 
     MuiSelect: {
       defaultProps: {
+        variant: "filled",
         MenuProps: {
           style: {
             maxHeight: 400,

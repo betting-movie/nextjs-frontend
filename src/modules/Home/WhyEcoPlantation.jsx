@@ -53,6 +53,11 @@ const CustomWhyEcoPlantation = styled(Box)(({ theme }) => ({
     marginTop: "-550px",
   },
 
+  ".image-layout": {
+    maxHeight: "300px",
+    width: "100%",
+  },
+
   [theme.breakpoints.down("md")]: {
     ".layout": {
       padding: "10px",
@@ -155,10 +160,12 @@ const WhyEcoPlantation = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  width: "100%",
                 }}
               >
-                <img src={WhyEcoPlantationData[selectedInfo]?.img} />
+                <img
+                  className="image-layout"
+                  src={WhyEcoPlantationData[selectedInfo]?.img}
+                />
               </Box>
             </Grid>
             <Grid
