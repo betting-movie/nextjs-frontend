@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Box sx={{ background: primary?.main }}>
       <Head>
-        <title>Ecopay</title>
+        <title>Leafyprofit</title>
         <meta name="description" content="Lets plant trees" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.svg" />

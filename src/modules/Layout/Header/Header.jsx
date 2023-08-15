@@ -14,13 +14,27 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { primary } from "@/src/SDK/theme";
 import { Link } from "@mui/material";
+import { useRouter } from "next/router";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Our services", "About Us", "What’s new?"];
+const navItems = [
+
+  {name:"Home", path:"/"},
+  {name:"Why leafyprofit", path:"/#whyLeafyprofit"},
+  
+  {name:"Our plantation", path:"/#ourplantation"},
+  {name:"Join today", path:"/#jointoday"},
+  
+  
+ 
+
+
+];
 
 function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useRouter()
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -28,15 +42,19 @@ function Header(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 2 }} onClick={()=>{
+            navigate.push('/')
+          }}>
         <img src={"/images/logo.svg"} />
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item?.name} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }} onClick={()=>{
+                  navigate.push(item?.path)
+                }}>
+              <ListItemText primary={item?.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -82,8 +100,8 @@ function Header(props) {
                 src={"/images/mobileLogo.svg"}
                 alt="Turno club logo"
                 className={"image-section"}
-                onClick={() => {
-                  //navigate.push("/");
+                onClick={()=>{
+                  navigate.push('/')
                 }}
               />
             </Box>
@@ -160,6 +178,11 @@ function Header(props) {
               flexGrow: 1,
               display: { xs: "none", sm: "none", md: "block" },
             }}
+
+
+            onClick={()=>{
+              navigate.push('/')
+            }}
           >
             <img src={"/images/logo.svg"} />
           </Typography>
@@ -168,7 +191,7 @@ function Header(props) {
           >
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.name}
                 sx={{
                   color: primary?.fantaGrey,
                   margin: "0em 1.5em 0em 1.5em",
@@ -176,8 +199,12 @@ function Header(props) {
                   border: "none",
                   background: primary?.white,
                 }}
+
+                onClick={()=>{
+                  navigate.push(item?.path)
+                }}
               >
-                {item}
+                {item?.name}
               </Button>
             ))}
           </Box>

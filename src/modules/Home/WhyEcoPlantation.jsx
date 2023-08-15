@@ -147,7 +147,7 @@ const WhyEcoPlantation = () => {
   const [selectedInfo, setSelectedInfo] = useState(0);
   return (
     <>
-      <CustomWhyEcoPlantation>
+      <CustomWhyEcoPlantation  id="whyLeafyprofit">
         <Box className="layout">
           <Grid container>
             <Grid
@@ -176,7 +176,7 @@ const WhyEcoPlantation = () => {
             >
               <Box>
                 <Typography className="headerInfo">
-                  Why Switch to Ecopay?
+                  Why Switch to Leafyprofit?
                 </Typography>
                 <Typography className="subHeader">
                   {WhyEcoPlantationData[selectedInfo]?.investmentPurpose}

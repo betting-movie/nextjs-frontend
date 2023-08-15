@@ -2,6 +2,7 @@ import { CustomStepper } from "@/src/SDK/Stepper";
 import { primary } from "@/src/SDK/theme";
 import { statsData } from "@/src/constant/StatData";
 import { Box, Button, Grid, Typography, styled } from "@mui/material";
+import { useRouter } from "next/router";
 import React from "react";
 
 const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
@@ -143,8 +144,9 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 }));
 
 const WelcomeInvesting = () => {
+  const navigate = useRouter()
   return (
-    <CustomWelcomeInvesting>
+    <CustomWelcomeInvesting id="welcomeinvesting">
       <Grid container>
         <Grid item md={6}>
           <Box>
@@ -155,7 +157,9 @@ const WelcomeInvesting = () => {
             <Typography className="subHeading">
               Plant tree | Help Nature | Profit Investment
             </Typography>
-            <Button className="cta">Invest Now</Button>
+            <Button className="cta" onClick={()=>{
+            navigate.push('/contact-us')
+          }}>Invest Now</Button>
 
             <Box className="grid-container">
               <Grid container spacing={2}>

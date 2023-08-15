@@ -72,11 +72,11 @@ const CustomPlatationStats = styled(Box)(({ theme }) => ({
 
 const PlatationStats = () => {
   return (
-    <CustomPlatationStats>
+    <CustomPlatationStats id="plantationstat">
       <Box sx={{ background: primary?.main }}>
         <Box>
           <Typography className="stats-heading">
-            ECOPAY COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
+            Leafyprofit COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
           </Typography>
           <Typography className="calc-data">{"20,74,890"}</Typography>
         </Box>

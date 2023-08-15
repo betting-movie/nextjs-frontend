@@ -17,7 +17,7 @@ const cardData = [
     id: 1,
     img: "/images/ScopeCardImage/GreenLegacy.webp",
     heading: "Choose Your Tree, Leave a Green Legacy",
-    desc: "At ecopay, we understand that sustainability is a personal commitment. That's why we empower you to choose the tree that resonates with your values and aspirations.",
+    desc: "At Leafyprofit, we understand that sustainability is a personal commitment. That's why we empower you to choose the tree that resonates with your values and aspirations.",
     color: primary?.darkYellow,
   },
   {
@@ -96,7 +96,7 @@ const CustomPlatationScope = styled(Box)(({ theme }) => ({
 
 const PlatationScope = () => {
   return (
-    <CustomPlatationScope>
+    <CustomPlatationScope  id="ourplantation">
       <Box>
         <Typography className="platation-scope-heading">
           HOW OUR TREES PLANTATION MAKE YOUR MONEY?

@@ -78,6 +78,7 @@ const CustomFooter = styled(Box)(({ theme }) => ({
   },
 }));
 const Footer = () => {
+  
   const navigate = useRouter();
   return (
     <CustomFooter>
@@ -102,7 +103,9 @@ const Footer = () => {
                 {/* <Link href="#"> */}
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"Home"}</Typography>
+                    <Typography className="sub-data" onClick={()=>{
+                      navigate.push('/')
+                    }}>{"Home"}</Typography>
                   }
                 />
                 {/* </Link> */}
@@ -111,8 +114,10 @@ const Footer = () => {
                 {/* <Link href="#"> */}
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">
-                      {"Our Services"}
+                    <Typography className="sub-data" onClick={()=>{
+                      navigate.push('/#whyLeafyprofit')
+                    }}>
+                      {"Why leafyprofit"}
                     </Typography>
                   }
                 />
@@ -122,26 +127,26 @@ const Footer = () => {
               <ListItem sx={{ padding: "8px 0px" }}>
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"About Us"}</Typography>
-                  }
-                />
-              </ListItem>
-              <ListItem sx={{ padding: "8px 0px" }}>
-                <ListItemText
-                  primary={
-                    <Typography className="sub-data">
-                      {"What's new?"}
+                    <Typography className="sub-data" onClick={()=>{
+                      navigate.push('/#ourplantation')
+                    }}>
+                      {"Our plantation"}
                     </Typography>
                   }
                 />
               </ListItem>
-              {/* <ListItem sx={{ padding: "8px 0px" }}>
+
+              <ListItem sx={{ padding: "8px 0px" }}>
                 <ListItemText
                   primary={
-                    <Typography className="sub-data">{"Offers"}</Typography>
+                    <Typography className="sub-data" onClick={()=>{
+                      navigate.push('/#jointoday')
+                    }}>{"Join today"}</Typography>
                   }
                 />
-              </ListItem> */}
+              </ListItem>
+             
+             
             </List>
           </Grid>
 
@@ -268,7 +273,7 @@ const Footer = () => {
               fontWeight: { sx: "500", md: "600" },
             }}
           >
-            Invest with Purpose. Invest with Ecopay.
+            Invest with Purpose. Invest with Leafyprofit.
           </Typography>
         </Box>
       </Box>

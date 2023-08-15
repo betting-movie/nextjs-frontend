@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { primary } from "@/src/SDK/theme";
 import { Facebook, YouTube } from "@mui/icons-material";
+import { useRouter } from "next/router";
 
 const Icon = [
   {
@@ -48,8 +49,10 @@ const CustomJoinPlantation = styled(Box)(({ theme }) => ({
 }));
 
 const JoinPlantation = () => {
+
+  const navigate = useRouter()
   return (
-    <CustomJoinPlantation>
+    <CustomJoinPlantation id="jointoday">
       <Box
         sx={{
           padding: { xs: "10px 20px", md: "90px 60px" },
@@ -64,7 +67,7 @@ const JoinPlantation = () => {
           }}
           className="join-heading"
         >
-          Join Ecopay Today and Make the Switch!
+          Join Leafyprofit Today and Make the Switch!
         </Typography>
         <Typography
           sx={{
@@ -73,11 +76,11 @@ const JoinPlantation = () => {
             color: primary?.mainText,
           }}
         >
-          Join Ecopay Today and Make the Switch!
-          <br /> By choosing Ecopay, you become a catalyst for change. Your
+          Join Leafyprofit Today and Make the Switch!
+          <br /> By choosing Leafyprofit, you become a catalyst for change. Your
           investment dollars become a force for good, contributing to a world
           that prioritizes environmental conservation, social progress, and
-          responsible economic growth. Switch to Ecopay today and take the first
+          responsible economic growth. Switch to Leafyprofit today and take the first
           step towards a brighter, greener, and more sustainable future.
         </Typography>
       </Box>
@@ -91,7 +94,9 @@ const JoinPlantation = () => {
         }}
       >
         <Box>
-          <Button variant="contained" className="join-invest-button">
+          <Button variant="contained" className="join-invest-button" onClick={()=>{
+            navigate.push('/contact-us')
+          }}>
             Invest Now
           </Button>
         </Box>
