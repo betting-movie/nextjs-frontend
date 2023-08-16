@@ -287,7 +287,7 @@ const ContactUs = () => {
                               <InputAdornment position="end">
                                 <MemoizedButton
                                   type="submit"
-                                  content={"WhatsApp"}
+                                  content={"Connect"}
                                   className="submit-cta"
                                   loading={loading}
                                   handleClick={(e) => {
