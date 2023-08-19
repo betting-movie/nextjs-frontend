@@ -5,7 +5,7 @@ export const headers = {
 };
 
 const LeadService = (payload) => {
-  headers.auth_token = process.env.NEXT_PUBLIC_TOKEN;
+  //headers.auth_token = process.env.NEXT_PUBLIC_TOKEN;
 
   const userDetails = {
     phone_number: payload?.mobile,
