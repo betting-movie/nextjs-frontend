@@ -18,23 +18,17 @@ import { useRouter } from "next/router";
 
 const drawerWidth = 240;
 const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Why leafyprofit", path: "/#whyLeafyprofit" },
 
-  {name:"Home", path:"/"},
-  {name:"Why leafyprofit", path:"/#whyLeafyprofit"},
-  
-  {name:"Our plantation", path:"/#ourplantation"},
-  {name:"Join today", path:"/#jointoday"},
-  
-  
- 
-
-
+  { name: "Our plantation", path: "/#ourplantation" },
+  { name: "Join today", path: "/#jointoday" },
 ];
 
 function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const navigate = useRouter()
+  const navigate = useRouter();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -42,18 +36,25 @@ function Header(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }} onClick={()=>{
-            navigate.push('/')
-          }}>
+      <Typography
+        variant="h6"
+        sx={{ my: 2 }}
+        onClick={() => {
+          navigate.push("/");
+        }}
+      >
         <img src={"/images/logo.svg"} />
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item?.name} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }} onClick={()=>{
-                  navigate.push(item?.path)
-                }}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => {
+                navigate.push(item?.path);
+              }}
+            >
               <ListItemText primary={item?.name} />
             </ListItemButton>
           </ListItem>
@@ -98,10 +99,10 @@ function Header(props) {
             <Box style={{ width: "120px" }}>
               <img
                 src={"/images/mobileLogo.svg"}
-                alt="Turno club logo"
+                alt="Leafy Profit logo"
                 className={"image-section"}
-                onClick={()=>{
-                  navigate.push('/')
+                onClick={() => {
+                  navigate.push("/");
                 }}
               />
             </Box>
@@ -178,10 +179,8 @@ function Header(props) {
               flexGrow: 1,
               display: { xs: "none", sm: "none", md: "block" },
             }}
-
-
-            onClick={()=>{
-              navigate.push('/')
+            onClick={() => {
+              navigate.push("/");
             }}
           >
             <img src={"/images/logo.svg"} />
@@ -199,9 +198,8 @@ function Header(props) {
                   border: "none",
                   background: primary?.white,
                 }}
-
-                onClick={()=>{
-                  navigate.push(item?.path)
+                onClick={() => {
+                  navigate.push(item?.path);
                 }}
               >
                 {item?.name}
