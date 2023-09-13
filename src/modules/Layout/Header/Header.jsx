@@ -43,7 +43,7 @@ function Header(props) {
           navigate.push("/");
         }}
       >
-        <img src={"/images/logo.svg"} />
+        <img src={"/images/logo.svg"} style={{width:"150px"}} />
       </Typography>
       <Divider />
       <List>
