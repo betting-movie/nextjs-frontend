@@ -49,8 +49,7 @@ const CustomJoinPlantation = styled(Box)(({ theme }) => ({
 }));
 
 const JoinPlantation = () => {
-
-  const navigate = useRouter()
+  const navigate = useRouter();
   return (
     <CustomJoinPlantation id="jointoday">
       <Box
@@ -80,8 +79,8 @@ const JoinPlantation = () => {
           <br /> By choosing Leafyprofit, you become a catalyst for change. Your
           investment dollars become a force for good, contributing to a world
           that prioritizes environmental conservation, social progress, and
-          responsible economic growth. Switch to Leafyprofit today and take the first
-          step towards a brighter, greener, and more sustainable future.
+          responsible economic growth. Switch to Leafyprofit today and take the
+          first step towards a brighter, greener, and more sustainable future.
         </Typography>
       </Box>
       <Box
@@ -94,9 +93,13 @@ const JoinPlantation = () => {
         }}
       >
         <Box>
-          <Button variant="contained" className="join-invest-button" onClick={()=>{
-            navigate.push('/contact-us')
-          }}>
+          <Button
+            variant="contained"
+            className="join-invest-button"
+            onClick={() => {
+              navigate.push("/contact-us");
+            }}
+          >
             Invest Now
           </Button>
         </Box>

@@ -12,9 +12,9 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 
   ".heading": {
     color: primary?.white,
-    fontSize: "80px",
+    fontSize: "60px",
     fontWeight: "700",
-    lineHeight: "96px",
+    lineHeight: "70px",
     letterSpacing: "0px",
     textAlign: "left",
     marginBottom: "20px",
@@ -22,7 +22,7 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 
   ".subHeading": {
     color: primary?.white,
-    fontSize: "38px",
+    fontSize: "24px",
     fontWeight: "400",
     lineHeight: "57px",
     textAlign: "left",
@@ -61,7 +61,7 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 
     ".heading": {
       color: primary?.white,
-      fontSize: "40px",
+      fontSize: "32px",
       fontWeight: "700",
       lineHeight: "50px",
       letterSpacing: "0px",
@@ -144,22 +144,30 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
 }));
 
 const WelcomeInvesting = () => {
-  const navigate = useRouter()
+  const navigate = useRouter();
   return (
     <CustomWelcomeInvesting id="welcomeinvesting">
       <Grid container>
         <Grid item md={6}>
           <Box>
-            <Typography className="heading">
-              Welcome to the smart investing
+            <Typography variant="h1" className="heading">
+              <span style={{ color: primary.fantaOrange }}>
+                Unlocking Nature's Wealth{" "}
+              </span>
+              Invest in Green Returns with Leafy Profit
             </Typography>
 
-            <Typography className="subHeading">
-              Plant tree | Help Nature | Profit Investment
+            <Typography variant="h2" className="subHeading">
+              Cultivate Green | Harvest Profit | Grow Your Investment
             </Typography>
-            <Button className="cta" onClick={()=>{
-            navigate.push('/contact-us')
-          }}>Invest Now</Button>
+            <Button
+              className="cta"
+              onClick={() => {
+                navigate.push("/contact-us");
+              }}
+            >
+              Invest Now
+            </Button>
 
             <Box className="grid-container">
               <Grid container spacing={2}>
@@ -197,6 +205,34 @@ const WelcomeInvesting = () => {
           </Box>
         </Grid>
       </Grid>
+
+      {/* <Box
+        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
+      >
+        <Typography
+          variant="h3"
+          className="subHeading"
+          style={{ lineHeight: "30px", marginTop: "20px" }}
+        >
+          <span style={{ color: primary.darkYellow }}>
+            Invest in nature to yield financial rewards,
+          </span>
+          Investing with Leafy Profit offers a unique and compelling opportunity
+          for individuals and businesses for several reasons{" "}
+          <span style={{ color: primary.fantaGrey }}>Grow Green Profit</span>
+          <span >Grow Oxygen </span>
+          <span style={{ color: primary.fantaOrange }}>Grow Your Farm</span>
+          <span>Grow your forest</span>
+          <span style={{ color: primary.darkYellow }}>Get a way to harness your kids with agri cultivation</span>
+          <span>Gift a tree to your beloved ones</span>
+        </Typography>
+      </Box> */}
+
+      {/* <Box>
+        <Typography>“Invest in nature to yield financial rewards”</Typography>
+
+        <Typography>“Invest in nature to yield financial rewards”</Typography>
+      </Box> */}
     </CustomWelcomeInvesting>
   );
 };

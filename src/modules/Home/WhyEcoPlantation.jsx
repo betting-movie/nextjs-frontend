@@ -147,7 +147,7 @@ const WhyEcoPlantation = () => {
   const [selectedInfo, setSelectedInfo] = useState(0);
   return (
     <>
-      <CustomWhyEcoPlantation  id="whyLeafyprofit">
+      <CustomWhyEcoPlantation id="whyLeafyprofit">
         <Box className="layout">
           <Grid container>
             <Grid

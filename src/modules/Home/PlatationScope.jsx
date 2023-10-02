@@ -96,7 +96,7 @@ const CustomPlatationScope = styled(Box)(({ theme }) => ({
 
 const PlatationScope = () => {
   return (
-    <CustomPlatationScope  id="ourplantation">
+    <CustomPlatationScope id="ourplantation">
       <Box>
         <Typography className="platation-scope-heading">
           HOW OUR TREES PLANTATION MAKE YOUR MONEY?
