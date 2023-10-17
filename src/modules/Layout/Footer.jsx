@@ -212,7 +212,7 @@ const Footer = () => {
                     sx={{ marginTop: { xs: "-10px" } }}
                   >
                     {
-                      "Blubble Pvt Ltd, Attic Space- Chanakya, 4th Floor, No. 32, 2nd cross, Nanjappa Reddy Layout, Koramangala 8th Block, Bengaluru, Karnataka 560095"
+                      "leafyprofit pvt ltd., Attic Space- Chanakya, 4th Floor, No. 32, 2nd cross, Nanjappa Reddy Layout, Koramangala 8th Block, Bengaluru, Karnataka 560095"
                     }
                   </Typography>
                 }
@@ -241,7 +241,7 @@ const Footer = () => {
                     className="sub-data"
                     sx={{ marginTop: { xs: "-10px" } }}
                   >
-                    {"+91 XXXXXXXXXX"}
+                    {"+91 8303758783"}
                   </Typography>
                 }
               />
@@ -252,7 +252,7 @@ const Footer = () => {
                   <Typography
                     className="sub-data"
                     sx={{ marginTop: { xs: "-10px" } }}
-                  >{`© Copyright 2021. All rights reserved.`}</Typography>
+                  >{`© Copyright 2024. All rights reserved.`}</Typography>
                 }
               />
             </ListItem>
