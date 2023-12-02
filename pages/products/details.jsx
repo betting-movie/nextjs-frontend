@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { MemoizedHeader } from "../src/modules/Layout/Header/Header";
+import { MemoizedHeader } from "../../src/modules/Layout/Header/Header";
 import { primary } from "@/src/SDK/theme";
 import { Box, Grid, Typography } from "@mui/material";
 import { MemoizedWelcomeInvesting } from "@/src/modules/Home/WelcomeInvesting";
@@ -9,12 +9,14 @@ import { MemoizedPlatationScope } from "@/src/modules/Home/PlatationScope";
 import { MemoizedPlatationStats } from "@/src/modules/Home/PlantationStats";
 import { MemoizedJoinPlantation } from "@/src/modules/Home/JoinPlantation";
 import { MemoizedFooter } from "@/src/modules/Layout/Footer";
-import PlantList from "@/src/modules/purchaseTrees/plantList";
 import { MemoizedPlantCard } from "@/src/modules/purchaseTrees/plantCards";
+import PlantList from "@/src/modules/purchaseTrees/plantList";
+import { MemoizedPlantColCard } from "@/src/modules/purchaseTrees/collectionCards";
+import ImageSlider from "@/src/modules/purchaseTrees/imageSlider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Products() {
   const data = [
     {
       name: "Trees as a Gift",
@@ -70,6 +72,7 @@ export default function Home() {
     },
     // ... (continue with other categories and data)
   ];
+
   return (
     <Box sx={{ background: primary?.main }}>
       <Head>
@@ -149,53 +152,9 @@ export default function Home() {
 
         <link rel="icon" href="/images/logo.svg" />
       </Head>
-      <Box sx={{ background: primary?.main }}>
+      <Box sx={{ background: primary?.white }}>
         <MemoizedHeader />
-        <MemoizedWelcomeInvesting />
-
-        {/* <PlantList data={data}/>
-
-        <Box sx={{display:"flex", justifyContent:"center", width:"100%"}}>
-        <PlantList data={data}/>
-        </Box> */}
-
-        <Box
-          display={"block"}
-          justifyContent={"center"}
-          sx={{
-            padding: {
-              lg: "0px 80px 20px 80px",
-              md: "16px 60px 16px 60px",
-              sm: "10px 20px 10px 20px",
-              xs: "12px",
-            },
-            paddingTop: { lg: "40px", md: "30px", sm: "20px", xs: "12px" },
-            background: primary?.white,
-          }}
-        >
-          <Typography
-            style={{
-              fontSize: "28px",
-              fontWeight: "500",
-              marginBottom: "10px",
-            }}
-          >
-            Products{" "}
-          </Typography>
-
-          <Grid container spacing={4}>
-            {data.map((res, index) => (
-              <Grid item key={index} xs={6} sm={4} md={4} lg={3}>
-                <MemoizedPlantCard info={res} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        <MemoizedWhyEcoPlantation />
-        <MemoizedPlatationScope />
-        <MemoizedPlatationStats />
-        <MemoizedJoinPlantation />
+        <ImageSlider />
         <MemoizedFooter />
       </Box>
     </Box>

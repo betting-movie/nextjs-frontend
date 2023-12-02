@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { MemoizedHeader } from "../src/modules/Layout/Header/Header";
+import { MemoizedHeader } from "../../src/modules/Layout/Header/Header";
 import { primary } from "@/src/SDK/theme";
 import { Box, Grid, Typography } from "@mui/material";
 import { MemoizedWelcomeInvesting } from "@/src/modules/Home/WelcomeInvesting";
