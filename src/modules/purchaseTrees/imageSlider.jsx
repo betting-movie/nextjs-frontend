@@ -38,7 +38,14 @@ const CustomImageSlider = styled(Box)(({ theme }) => ({
   ".swiperSlideImg": {
     display: "block",
     width: "100%",
-    height: "100%",
+    maxHeight: "300px",
+    objectFit: "cover",
+  },
+
+  ".swiperSlideImgThumb": {
+    display: "block",
+    width: "100%",
+    maxHeight: "100px",
     objectFit: "cover",
   },
 
@@ -156,61 +163,43 @@ export default function ImageSlider() {
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-1.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-2.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-3.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-4.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-5.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-6.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://swiperjs.com/demos/images/nature-7.jpg"
-            className="swiperSlideImg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            className="swiperSlideImg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            className="swiperSlideImg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            className="swiperSlideImg"
+            className="swiperSlideImgThumb"
           />
         </SwiperSlide>
       </Swiper>

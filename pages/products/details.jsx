@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { MemoizedHeader } from "../../src/modules/Layout/Header/Header";
 import { primary } from "@/src/SDK/theme";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Link, List, ListItem, Typography } from "@mui/material";
 import { MemoizedWelcomeInvesting } from "@/src/modules/Home/WelcomeInvesting";
 import { MemoizedWhyEcoPlantation } from "@/src/modules/Home/WhyEcoPlantation";
 import { MemoizedPlatationScope } from "@/src/modules/Home/PlatationScope";
@@ -13,6 +13,8 @@ import { MemoizedPlantCard } from "@/src/modules/purchaseTrees/plantCards";
 import PlantList from "@/src/modules/purchaseTrees/plantList";
 import { MemoizedPlantColCard } from "@/src/modules/purchaseTrees/collectionCards";
 import ImageSlider from "@/src/modules/purchaseTrees/imageSlider";
+import { MemoProductDetailsInfo } from "@/src/modules/purchaseTrees/productDetails/productDetailsInfo";
+import DescribedInfo from "@/src/modules/purchaseTrees/productDetails/descriptionInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -154,8 +156,50 @@ export default function Products() {
       </Head>
       <Box sx={{ background: primary?.white }}>
         <MemoizedHeader />
-        <ImageSlider />
-        <MemoizedFooter />
+
+        <MemoProductDetailsInfo data={data[0]} />
+        <Box
+          display={"block"}
+          justifyContent={"center"}
+          sx={{
+            padding: {
+              lg: "0px 80px 20px 80px",
+              md: "16px 60px 16px 60px",
+              sm: "10px 20px 10px 20px",
+              xs: "12px",
+            },
+            paddingTop: { lg: "40px", md: "30px", sm: "20px", xs: "12px" },
+            background: primary?.white,
+          }}
+        >
+          <Typography
+            style={{
+              fontSize: "28px",
+              fontWeight: "500",
+              marginBottom: "10px",
+            }}
+          >
+            Products{" "}
+          </Typography>
+
+          <Grid container spacing={4}>
+            {data.map((res, index) => (
+              <Grid item key={index} xs={6} sm={4} md={4} lg={3}>
+                <MemoizedPlantCard info={res} />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+<Box style={{display:"flex",justifyContent:"center"}}>
+
+<DescribedInfo/>
+</Box>
+       
+
+
+        
+        {/* <MemoizedFooter /> */}
       </Box>
     </Box>
   );
