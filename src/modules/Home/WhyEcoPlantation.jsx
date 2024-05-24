@@ -182,7 +182,7 @@ const WhyEcoPlantation = () => {
                  Save Nature with Leafyprofit
                 </Typography>
                 <Typography className="subHeader">
-                  {WhyEcoPlantationData[selectedInfo]?.investmentPurpose}
+                  {WhyEcoPlantationData[selectedInfo]?.PlantationPurpose}
                 </Typography>
                 <Typography className="detail">
                   {WhyEcoPlantationData[selectedInfo]?.detail}

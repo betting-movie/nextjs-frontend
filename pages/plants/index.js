@@ -75,7 +75,7 @@ export default function Products() {
   return (
     <Box sx={{ background: primary?.main }}>
       <Head>
-        <title>Leafy Profit - Sustainable Investment Platform</title>
+        <title>Leafy Profit - Sustainable Plantation Platform</title>
         <meta
           name="description"
           content="Experience 10X Assured Returns by Cultivating Your Farm and Trees with Our Expert Guidance. Start Your Journey to Sustainable Growth Today!"
@@ -84,7 +84,7 @@ export default function Products() {
 
         <meta
           name="keywords"
-          content="Leafy Profit, sustainable investment, green returns, eco-friendly profits, tree plantation investment, ethical investing, carbon credits, environmental impact, financial sustainability"
+          content="Leafy Profit, sustainable Plantation, green returns, eco-friendly profits, tree plantation Plantation, ethical investing, carbon credits, environmental impact, financial sustainability"
         />
         <meta name="author" content="Leafy Profit" />
         <meta name="url" content="https://www.leafyprofit.com/" />
@@ -97,7 +97,7 @@ export default function Products() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Leafy Profit - Sustainable Investment Platform"
+          content="Leafy Profit - Sustainable Plantation Platform"
         />
         <meta
           property="og:description"

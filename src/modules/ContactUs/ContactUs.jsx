@@ -171,7 +171,7 @@ const ContactUs = () => {
           <Typography className="thank-you">Thank you!</Typography>
           <Typography className="completed-desc">
             for taking a step towards both preserving our environment and
-            securing a sustainable future through your investment!
+            securing a sustainable future through your Plantation!
           </Typography>
           <Typography className="contact-info">
             Our support team will contact you asap!

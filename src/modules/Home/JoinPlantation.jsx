@@ -79,7 +79,7 @@ const JoinPlantation = () => {
         >
           Join Leafyprofit Today and Make the Switch!
           <br /> By choosing Leafyprofit, you become a catalyst for change. Your
-          investment dollars become a force for good, contributing to a world
+          Plantation dollars become a force for good, contributing to a world
           that prioritizes environmental conservation, social progress, and
           responsible economic growth. Switch to Leafyprofit today and take the
           first step towards a brighter, greener, and more sustainable future.

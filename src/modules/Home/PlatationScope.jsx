@@ -101,11 +101,10 @@ const PlatationScope = () => {
     <CustomPlatationScope id="ourplantation">
       <Box>
         <Typography className="platation-scope-heading">
-          HOW OUR TREES PLANTATION MAKE YOUR MONEY?
+          HOW OUR TREES PLANTATION MAKE YOUR FUTURE?
         </Typography>
         <Typography className="platation-scope-description">
-          We plant in 10+ Cities through Profitable Future Investment with
-          future investment grow and nature{" "}
+        We implement Profitable Future Plantation across 10+ cities, promoting sustainable growth and fostering nature for a greener tomorrow. Our urban green spaces initiative enhances biodiversity, sustainability, and community well-being.{" "}
         </Typography>
       </Box>
       <Grid
