@@ -194,12 +194,13 @@ export default function Products() {
 <Box style={{display:"flex",justifyContent:"center"}}>
 
 <DescribedInfo/>
+
 </Box>
        
 
 
         
-        {/* <MemoizedFooter /> */}
+        <MemoizedFooter />
       </Box>
     </Box>
   );

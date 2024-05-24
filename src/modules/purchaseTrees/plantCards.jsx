@@ -101,6 +101,10 @@ const PlantCard = ({ info, id }) => {
               <MemoizedButton
                 content={"Plant Now"}
                 sx={{ fontSize: "12px", padding: "8px" }}
+
+                onClick={() => {
+                  navigate.push("/contact-us");
+                }}
               />
             </Box>
           </Box>

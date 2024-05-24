@@ -7,6 +7,9 @@ import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOu
 import { primary } from "@/src/SDK/theme";
 
 const CustomWhyEcoPlantation = styled(Box)(({ theme }) => ({
+
+  // margin:"-6em",
+  // position:"absolute",
   ".layout": {
     padding: "30px",
     paddingLeft: "70px",
@@ -176,7 +179,7 @@ const WhyEcoPlantation = () => {
             >
               <Box>
                 <Typography className="headerInfo">
-                  Why Switch to Leafyprofit?
+                 Save Nature with Leafyprofit
                 </Typography>
                 <Typography className="subHeader">
                   {WhyEcoPlantationData[selectedInfo]?.investmentPurpose}

@@ -153,11 +153,11 @@ export default function Home() {
         <MemoizedHeader />
         <MemoizedWelcomeInvesting />
 
-        {/* <PlantList data={data}/>
+         {/* <PlantList data={data}/> */}
 
-        <Box sx={{display:"flex", justifyContent:"center", width:"100%"}}>
+        {/* <Box sx={{display:"flex", justifyContent:"center", width:"100%"}}>
         <PlantList data={data}/>
-        </Box> */}
+        </Box>  */}
 
         <Box
           display={"block"}

@@ -37,7 +37,9 @@ const cardData = [
 ];
 
 const CustomPlatationScope = styled(Box)(({ theme }) => ({
-  padding: "30px",
+  //padding: "30px",
+  // margin:"-6em",
+  // position:"absolute",
   ".card-heading": {
     fontWeight: "700",
     fontSize: "24px",
@@ -118,6 +120,7 @@ const PlatationScope = () => {
                 borderRadius: "25px",
                 background: data.color,
                 maxWidth: 385,
+                pb:"20px"
               }}
             >
               <CardMedia
@@ -139,7 +142,7 @@ const PlatationScope = () => {
                   p: { xs: "16px 16px 16px 24px", md: "0px 30px 20px 30px" },
                 }}
               >
-                <Button
+                {/* <Button
                   disableElevation
                   sx={{
                     padding: "15px, 36px, 15px, 36px",
@@ -151,7 +154,7 @@ const PlatationScope = () => {
                   }}
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </CardActions>
             </Card>
           </Grid>
