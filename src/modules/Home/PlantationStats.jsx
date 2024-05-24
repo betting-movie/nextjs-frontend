@@ -5,6 +5,8 @@ import React from "react";
 
 const CustomPlatationStats = styled(Box)(({ theme }) => ({
   background: "#fff",
+  // margin:"-6em",
+  // position:"absolute",
   ".stats-heading": {
     fontWeight: "700",
     fontSize: "20px",
@@ -76,9 +78,9 @@ const PlatationStats = () => {
       <Box sx={{ background: primary?.main }}>
         <Box>
           <Typography className="stats-heading">
-            Leafyprofit COMMUNITY'S TREES: TOTAL PROFIT AND IMPACT
+          "Leafyprofit Community Environmental Impact"
           </Typography>
-          <Typography className="calc-data">{"20,74,890"}</Typography>
+          {/* <Typography className="calc-data">{"20,74,890"}</Typography> */}
         </Box>
         <Box className="grid-container">
           <Grid

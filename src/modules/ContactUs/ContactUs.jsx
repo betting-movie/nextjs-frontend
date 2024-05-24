@@ -216,7 +216,7 @@ const ContactUs = () => {
               <Box>
                 <img src={"/images/whyecopay2.webp"} className="stats-image" />
                 <Typography className="header-info">
-                  Let’s plan your investment together!
+                  Let’s plant our future together!
                 </Typography>
                 <Typography className="form-header">Connect with us</Typography>
 

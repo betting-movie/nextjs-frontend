@@ -1,4 +1,5 @@
 import { theme } from "@/src/SDK/theme";
+import { CustomContextProvider } from "@/src/context/context";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
 import axios from "axios";
@@ -9,11 +10,13 @@ axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      {" "}
-      <CssBaseline>
-        <Component {...pageProps} />
-      </CssBaseline>
-    </ThemeProvider>
+    <CustomContextProvider>
+      <ThemeProvider theme={theme}>
+        {" "}
+        <CssBaseline>
+          <Component {...pageProps} />
+        </CssBaseline>
+      </ThemeProvider>
+    </CustomContextProvider>
   );
 }

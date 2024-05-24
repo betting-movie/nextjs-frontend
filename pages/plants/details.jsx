@@ -1,20 +1,24 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { MemoizedHeader } from "../src/modules/Layout/Header/Header";
+import { MemoizedHeader } from "../../src/modules/Layout/Header/Header";
 import { primary } from "@/src/SDK/theme";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Link, List, ListItem, Typography } from "@mui/material";
 import { MemoizedWelcomeInvesting } from "@/src/modules/Home/WelcomeInvesting";
 import { MemoizedWhyEcoPlantation } from "@/src/modules/Home/WhyEcoPlantation";
 import { MemoizedPlatationScope } from "@/src/modules/Home/PlatationScope";
 import { MemoizedPlatationStats } from "@/src/modules/Home/PlantationStats";
 import { MemoizedJoinPlantation } from "@/src/modules/Home/JoinPlantation";
 import { MemoizedFooter } from "@/src/modules/Layout/Footer";
-import PlantList from "@/src/modules/purchaseTrees/plantList";
 import { MemoizedPlantCard } from "@/src/modules/purchaseTrees/plantCards";
+import PlantList from "@/src/modules/purchaseTrees/plantList";
+import { MemoizedPlantColCard } from "@/src/modules/purchaseTrees/collectionCards";
+import ImageSlider from "@/src/modules/purchaseTrees/imageSlider";
+import { MemoProductDetailsInfo } from "@/src/modules/purchaseTrees/productDetails/productDetailsInfo";
+import DescribedInfo from "@/src/modules/purchaseTrees/productDetails/descriptionInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Products() {
   const data = [
     {
       name: "Trees as a Gift",
@@ -70,6 +74,7 @@ export default function Home() {
     },
     // ... (continue with other categories and data)
   ];
+
   return (
     <Box sx={{ background: primary?.main }}>
       <Head>
@@ -149,16 +154,10 @@ export default function Home() {
 
         <link rel="icon" href="/images/logo.svg" />
       </Head>
-      <Box sx={{ background: primary?.main }}>
+      <Box sx={{ background: primary?.white }}>
         <MemoizedHeader />
-        <MemoizedWelcomeInvesting />
 
-         {/* <PlantList data={data}/> */}
-
-        {/* <Box sx={{display:"flex", justifyContent:"center", width:"100%"}}>
-        <PlantList data={data}/>
-        </Box>  */}
-
+        <MemoProductDetailsInfo data={data[0]} />
         <Box
           display={"block"}
           justifyContent={"center"}
@@ -192,10 +191,15 @@ export default function Home() {
           </Grid>
         </Box>
 
-        <MemoizedWhyEcoPlantation />
-        <MemoizedPlatationScope />
-        <MemoizedPlatationStats />
-        <MemoizedJoinPlantation />
+<Box style={{display:"flex",justifyContent:"center"}}>
+
+<DescribedInfo/>
+
+</Box>
+       
+
+
+        
         <MemoizedFooter />
       </Box>
     </Box>

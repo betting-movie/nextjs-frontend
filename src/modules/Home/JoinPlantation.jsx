@@ -33,6 +33,8 @@ const Icon = [
 
 const CustomJoinPlantation = styled(Box)(({ theme }) => ({
   background: "#fff",
+  // margin:"-6em",
+  // position:"absolute",
   ".join-heading": {
     color: primary?.main,
   },

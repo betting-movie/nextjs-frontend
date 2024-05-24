@@ -9,6 +9,8 @@ const CustomWelcomeInvesting = styled(Box)(({ theme }) => ({
   padding: "30px",
   paddingLeft: "70px",
   paddingTop: "50px",
+  // margin:"-6em",
+  // position:"absolute",
 
   ".heading": {
     color: primary?.white,
@@ -158,7 +160,7 @@ const WelcomeInvesting = () => {
             </Typography>
 
             <Typography variant="h2" className="subHeading">
-              Cultivate Green | Harvest Profit | Grow Your Investment
+              Cultivate Green | Harvest Profit | Save Next Generation
             </Typography>
             <Button
               className="cta"
@@ -166,7 +168,7 @@ const WelcomeInvesting = () => {
                 navigate.push("/contact-us");
               }}
             >
-              Invest Now
+              Donate
             </Button>
 
             <Box className="grid-container">
