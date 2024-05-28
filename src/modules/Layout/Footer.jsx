@@ -226,7 +226,7 @@ const Footer = () => {
                     className="sub-data"
                     sx={{ marginTop: { xs: "-10px" } }}
                   >
-                    {"turn@sales.in"}
+                    {"product@leafyprofit.com"}
                   </Typography>
                 }
               />
@@ -241,7 +241,7 @@ const Footer = () => {
                     className="sub-data"
                     sx={{ marginTop: { xs: "-10px" } }}
                   >
-                    {"+91 8303758783"}
+                    {"+91 9901549150"}
                   </Typography>
                 }
               />
